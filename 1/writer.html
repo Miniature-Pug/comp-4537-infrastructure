@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Manjot Randahwa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>writer_comp4537_lab1</title>
+    <link rel="stylesheet" href="./css/writer.css">
+    <script type="module" src="./js/common.js"></script>
+    <script type="module" src="./js/writer.js" defer></script>
+</head>
+
+<body>
+    <div id="updatedAt">
+        <p>Updated at: <span id="time"></span></p>
+    </div>
+
+    <div id="writer">
+        <template class="writerTemplate">
+            <div class="writerNote">
+                <textarea id="note" rows="10" cols="20" placeholder="Enter note here..."></textarea>
+                <button id="remove" type="button">Remove</button>
+                <br>
+            </div>
+        </template>
+    </div>
+
+    <div id="writerAdd">
+        <button id="add" type="button">Add</button>
+    </div>
+
+    <div id="indexButtonContainer">
+        <br>
+        <hr>
+        <button id="index" type="button">Back to Index</button>
+    </div>
+</body>
+
+</html>

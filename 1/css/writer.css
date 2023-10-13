@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+}
+
+#writer {
+    margin-bottom: 10%;
+}
+
+.writerNote {
+    display: grid;
+    height: 100%;
+    width: 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    column-gap: 5%;
+}
+
+#note {
+    font-size: 150%;
+    text-align: center;
+    background-color: bisque;
+}
+
+#remove {
+    font-size: 150%;
+    height: 20%;
+    align-self: center;
+    background-color: darkred;
+}
+
+#indexButtonContainer {
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+
+#index {
+    font-size: 200%;
+    background-color: coral;
+}
+
+#writerAdd {
+    display: grid;
+    height: 100%;
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+#add {
+    font-size: 150%;
+    background-color: greenyellow;
+}
+
+#updatedAt {
+    display: grid;
+    height: 100%;
+    width: 80%;
+    text-align: right;
+    color: aliceblue;
+}
+
+#time {
+    color: antiquewhite;
+    text-align: right;
+}

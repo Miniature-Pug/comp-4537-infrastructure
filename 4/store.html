@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Store Word and Definition</title>
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+        <link rel="stylesheet" type="text/css" href="./css/store.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Store Word and Definition</h1>
+            <label for="word">Word:</label>
+            <input type="text" id="word" name="word" required><br><br>
+
+            <label for="definition">Definition:</label><br>
+            <textarea id="definition" name="definition" rows="4" required></textarea><br><br>
+            <button id="submitButton" type="submit">Submit</button>
+            <a href="./index.html" class="button">Back</a>
+            <div id="responseArea"><p id="statusText"></p></div>
+        </div>
+    <script src="./js/store.js"></script>
+    </body>
+</html>
+

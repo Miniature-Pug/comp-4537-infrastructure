@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: bisque;
+}
+
+#pageLinks {
+    display: grid;
+    height: 100%;
+    width: 80%;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    margin-left: 11.5%;
+    margin-right: 11.5%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    column-gap: 10%;
+    row-gap: 50%;
+}
+
+#insert_pre_determined_data .insert{
+    background-color: aquamarine;
+    font-size: 70%;
+}
+
+#insert_query .submit{
+    background-color: aquamarine;
+    font-size: 150%;
+}
+
+#reader {
+    background-color: aquamarine;
+    font-size: 150%;
+}

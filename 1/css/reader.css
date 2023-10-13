@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+
+#reader {
+    margin-bottom: 10%;
+}
+
+.readerNote {
+    display: grid;
+    height: 100%;
+    width: 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    margin-left: 36%;
+    margin-right: 36%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    column-gap: 5%;
+}
+
+#note {
+    font-size: 150%;
+    text-align: center;
+    background-color: bisque;
+}
+
+#indexButtonContainer {
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+
+#index {
+    font-size: 200%;
+    background-color: coral;
+}
+
+#updatedAt {
+    display: grid;
+    height: 100%;
+    width: 80%;
+    text-align: right;
+    color: aliceblue;
+}
+
+#time {
+    color: antiquewhite;
+    text-align: right;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Manjot Randahwa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reader_comp4537_lab1</title>
+    <link rel="stylesheet" href="./css/reader.css">
+    <script type="module" src="./js/common.js"></script>
+    <script type="module" src="./js/reader.js" defer></script>
+</head>
+
+<body>
+    <div id="updatedAt">
+        <p>Updated at: <span id="time"></span></p>
+    </div>
+    <div id="reader">
+        <template class="readerTemplate">
+            <div class="readerNote">
+                <textarea readonly id="note" rows="10" cols="40"></textarea>
+                <br>
+            </div>
+        </template>
+    </div>
+
+    <div id="indexButtonContainer">
+        <br>
+        <hr>
+        <button id="index" type="button">Back to Index</button>
+    </div>
+</body>
+
+</html>
