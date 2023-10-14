@@ -17,26 +17,8 @@ resource "aws_lb_target_group" "ec2-target-group" {
   }
 }
 
-resource "aws_lb_listener" "ec2-alb-https-listener" {
-  load_balancer_arn = data.aws_lb.ec2.arn
-  port              = "443"
-  protocol          = "HTTPS"
-  depends_on        = [aws_lb_target_group.ec2-target-group]
-  ssl_policy        = "ELBSecurityPolicy-TLS13-1-0-2021-06"
-  certificate_arn   = data.aws_acm_certificate.amazon_issued.arn
-
-  default_action {
-    type             = "fixed-response"
-    fixed_response {
-      content_type = "text/plain"
-      status_code  = "200"
-      message_body = "OK"
-    }
-  }
-}
-
 resource "aws_lb_listener_rule" "rule" {
-  listener_arn = aws_lb_listener.ec2-alb-https-listener.arn
+  listener_arn = data.aws_lb_listener.listener.arn
   action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.ec2-target-group.arn

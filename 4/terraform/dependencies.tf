@@ -32,3 +32,7 @@ data "aws_acm_certificate" "amazon_issued" {
   types       = ["AMAZON_ISSUED"]
   most_recent = true
 }
+
+data "aws_lb_listener" "listener" {
+  arn = "arn:aws:elasticloadbalancing:us-east-1:598490276344:listener/app/bcit/e835dbecd9aac310/1fa8674389003de1"
+}
