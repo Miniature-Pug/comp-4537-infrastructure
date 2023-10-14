@@ -20,10 +20,10 @@ function insert_pre_determined_data() {
             if (!response.ok) {
                 throw new Error(data.sqlMessage)
             } else {
-                textarea.textContent = JSON.stringify(data)
+                textarea.innerText = JSON.stringify(data)
             }
         } catch (error) {
-            textarea.textContent = error
+            textarea.innerText = error
             return
         }
     })
@@ -71,10 +71,10 @@ function insert_query() {
             if (!response.ok) {
                 throw new Error(data.sqlMessage)
             } else {
-                textarea.textContent = JSON.stringify(data)
+                textarea.innerText = JSON.stringify(data)
             }
         } catch (error) {
-            textarea.textContent = error
+            textarea.innerText = error
             return
         }
     })

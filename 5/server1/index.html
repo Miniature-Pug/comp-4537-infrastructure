@@ -13,20 +13,22 @@
 </head>
 
 <body>
-    <hr>
-    <div id="insert_pre_determined_data">
-        <h1>Insert Pre-Determined Data: <button class="insert">Submit</button></h1>
-        <textarea readonly placeholder="response" class="response" rows="4" cols="50"></textarea>
+    <div class="container">
+        <!-- First Part -->
+        <div class="part" id="insert_pre_determined_data">
+            <h2>Insert Pre-Determined Data</h2>
+            <button class="button insert" id="part1Button">Click Me</button>
+            <div class="response" id="part1Response"></div>
+        </div>
+
+        <!-- Second Part -->
+        <div class="part" id="insert_query">
+            <h2>Send Query</h2>
+            <button class="button submit" id="part2Button">Submit</button>
+            <textarea class="text-input query" id="textInput" placeholder="Enter query"></textarea>
+            <div class="response" id="part2Response"></div>
+        </div>
     </div>
-    <hr>
-    <hr>
-    <div id="insert_query">
-        <h1>Insert Query</h1>
-        <textarea placeholder="query" class="query" rows="4" cols="100"></textarea><br><br>
-        <button class="submit">Submit</button><br><br>
-        <textarea readonly placeholder="response" class="response" rows="4" cols="50"></textarea><br><br>
-    </div>
-    <hr>
 </body>
 
 </html>
