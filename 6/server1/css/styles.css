@@ -1,0 +1,119 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Index Page */
+.black-bg {
+    background-color: black;
+    color: #ffffff; /* White text */
+    padding: 20px;
+}
+
+/* Links styled as buttons */
+a {
+    background-color: #4CAF50; /* Green background for buttons */
+    color: #ffffff; /* White text for buttons */
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Write and Search Pages */
+form {
+    background-color: #333; /* Dark background for forms */
+    color: #ffffff; /* White text in forms */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #444; /* Slightly lighter background for input fields */
+    color: #ffffff; /* White text in input fields */
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Green background for submit buttons */
+    color: #ffffff; /* White text for submit buttons */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Modern text areas */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #444; /* Slightly lighter background for text areas */
+    color: #ffffff; /* White text in text areas */
+    border: none;
+    border-radius: 4px;
+}
+
+/* Style for serverResponse div */
+#serverResponse {
+    display: none; /* Initially hidden */
+    background-color: #4CAF50; /* Green background for success message */
+    color: #ffffff; /* White text for success message */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; /* Position at the top of the page */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.modal-content {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+/* Styles for the buttons */
+.modal-button {
+    margin: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Add a red background for the Delete button */
+#deleteButton {
+    background-color: red;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

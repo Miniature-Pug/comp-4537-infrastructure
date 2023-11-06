@@ -20,6 +20,7 @@ const INIT_PASSWORD = process.env.DB_INIT_PASSWORD
 const HOST = process.env.DB_HOST
 const TABLE_NAME = process.env.DB_TABLE_NAME
 const SERVER_PATH = process.env.SERVER_PATH
+let CREATE_SERVER = true
 // -------------------------------
 
 
@@ -68,50 +69,54 @@ const connectionEndFailure = "Can't end db instance connection:"
 // end init db connection
 // start user db connection
 // start server
-init.connect((err) => {
-    if (err) {
-        console.log(`${mySQLFailure} ${err}`)
-        return
-    } else {
-        init.query(`USE ${DATABASE}`, (err, result) => {
-            if (err) {
-                console.error(`${dbFailure} ${err}`)
-                return
-            } else {
-                console.log(`${dbSuccess} ${result}`)
-            }
-        })
-        init.query(createTable, (err, result) => {
-            if (err) {
-                console.error(`${tableFailure} ${err}`)
-                return
-            } else {
-                console.log(`${tableSuccess} ${result}`)
-            }
-        })
-        init.end((err) => {
-            if (err) {
-                console.error(`${connectionEndFailure} ${err}`)
-                return
-            } else {
-                user_connect.connect((err) => {
-                    if (err) {
-                        console.log(`${mySQLFailure} ${err}`)
-                        return
-                    } else {
-                        server.listen(SERVER_PORT, () => {
-                            console.log(`${serverCreationSuccess} ${SERVER_PORT}`)
-                        })
-                    }
-                })
-            }
-        })
-    }
-})
+function initialize() {
+    init.connect((err) => {
+        if (err) {
+            console.log(`${mySQLFailure} ${err}`)
+            return
+        } else {
+            init.query(`USE ${DATABASE}`, (err, result) => {
+                if (err) {
+                    console.error(`${dbFailure} ${err}`)
+                    return
+                } else {
+                    console.log(`${dbSuccess} ${result}`)
+                }
+            })
+            init.query(createTable, (err, result) => {
+                if (err) {
+                    console.error(`${tableFailure} ${err}`)
+                    return
+                } else {
+                    console.log(`${tableSuccess} ${result}`)
+                }
+            })
+            init.end((err) => {
+                if (err) {
+                    console.error(`${connectionEndFailure} ${err}`)
+                    return
+                } else {
+                    user_connect.connect((err) => {
+                        if (err) {
+                            console.log(`${mySQLFailure} ${err}`)
+                            return
+                        } else if (CREATE_SERVER) {
+                            server.listen(SERVER_PORT, () => {
+                                console.log(`${serverCreationSuccess} ${SERVER_PORT}`)
+                            })
+                        }
+                    })
+                }
+            })
+        }
+    })
+}
+
 
 
 // server handles user requests
 const server = http.createServer((req, res) => {
+    CREATE_SERVER = false
     const parsed_url = url.parse(req.url, true)
     const pathname = decodeURI(parsed_url.pathname).replace(SERVER_PATH, "")
     res.setHeader("Access-Control-Allow-Origin", "*")
@@ -173,3 +178,5 @@ const server = http.createServer((req, res) => {
         res.end('OK')
     }
 })
+
+initialize()

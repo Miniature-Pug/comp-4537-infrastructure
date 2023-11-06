@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Manjot Randahwa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_comp4537_lab6</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <script type="module" src="./js/write.js"></script>
+</head>
+
+<body class="black-bg">
+    <h1>Write Page</h1>
+    <a href="./index.html">Back to Index</a>
+    <form>
+        <label for="wordDropdown">Select Word Language:</label>
+        <select id="wordDropdown"></select>
+        <br>
+        <label for="word">Word:</label>
+        <input type="text" id="word" name="word" required>
+        <br>
+        <label for="definitionDropdown">Select Definition Language:</label>
+        <select id="definitionDropdown"></select>
+        <br>
+        <label for="definition">Definition:</label>
+        <input type="text" id="definition" name="definition" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="serverResponse"></div>
+
+    <!-- The custom modal -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <p>Word already exists, do you want to update the definition?</p>
+            <div class="button-container">
+                <button id="yesButton" class="modal-button">Yes</button>
+                <button id="noButton" class="modal-button">No</button>
+            </div>
+        </div>
+    </div>
+
+</html>
